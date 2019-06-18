@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="selectAlbum">Select album</label>
+  <select
+    id="selectAlbum"
+    class="form-control"
+    (change)="albumChanged()"
+    [(ngModel)]="selectedAlbumId"
+  >
+    <option *ngFor="let album of albums" [ngValue]="album.id">{{ album.title }}</option>
+  </select>
+</div>

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngIf="photos.length; then showPhotos; else showMessage"></ng-container>
+    <ng-template #showPhotos>
+      <div class="col-sm bottom-buffer" *ngFor="let photo of photos">
+        <img [src]="photo.thumbnailUrl" />
+      </div>
+    </ng-template>
+    <ng-template #showMessage>
+      No photos available
+    </ng-template>
+  </div>
+</div>

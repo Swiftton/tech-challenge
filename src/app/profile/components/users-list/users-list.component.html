@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="selectUser">Select user</label>
+  <select
+    id="selectUser"
+    class="form-control"
+    (change)="userChanged()"
+    [(ngModel)]="selectedUserId"
+  >
+    <option *ngFor="let user of users" [ngValue]="user.id">{{ user.name }}</option>
+  </select>
+</div>
